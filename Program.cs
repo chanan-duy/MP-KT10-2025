@@ -75,12 +75,47 @@ public static class MainLogic
         TestRectangle();
     }
 
+    private static void TestRnc()
+    {
+        var comparerRational = new RationalNumberComparer();
+
+        {
+            var r1 = new RationalNumber(2, 3);
+            var r2 = new RationalNumber(5, 7);
+
+            Console.WriteLine(
+                $"{r1.Numerator}/{r1.Denominator} {comparerRational.CompareToString(r1, r2)} {r2.Numerator}/{r2.Denominator}");
+        }
+        {
+            var r1 = new RationalNumber(1, 2);
+            var r2 = new RationalNumber(2, 4);
+
+            Console.WriteLine(
+                $"{r1.Numerator}/{r1.Denominator} {comparerRational.CompareToString(r1, r2)} {r2.Numerator}/{r2.Denominator}");
+        }
+
+        {
+            var r1 = new RationalNumber(2334 ,15634);
+            var r2 = new RationalNumber(1, 1777777);
+
+            Console.WriteLine(
+                $"{r1.Numerator}/{r1.Denominator} {comparerRational.CompareToString(r1, r2)} {r2.Numerator}/{r2.Denominator}");
+        }
+    }
+
+    private static void TestComparer()
+    {
+        TestRnc();
+        Console.Write(Environment.NewLine);
+    }
+
     public static void RunLogic()
     {
         TestRepositories();
         Console.Write(Environment.NewLine);
         TestClonable();
         Console.Write(Environment.NewLine);
+        TestComparer();
     }
 }
 
