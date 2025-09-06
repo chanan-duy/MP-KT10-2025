@@ -50,9 +50,26 @@ public static class MainLogic
         TestProductRepository();
     }
 
+    private static void TestPoint()
+    {
+        var point1 = new Point(12, 34);
+        Console.WriteLine(point1);
+        var point2 = point1.Clone();
+        Console.WriteLine(point2);
+        Console.WriteLine($"point1 == point2 (by ref): {point1 == point2}");
+    }
+
+    private static void TestClonable()
+    {
+        TestPoint();
+        Console.Write(Environment.NewLine);
+    }
+
     public static void RunLogic()
     {
         TestRepositories();
+        Console.Write(Environment.NewLine);
+        TestClonable();
         Console.Write(Environment.NewLine);
     }
 }
