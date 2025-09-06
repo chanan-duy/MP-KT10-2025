@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MP_KT10_2025", "MP_KT10_2025.csproj", "{1D1B7F22-A4FD-4A94-B4E7-5E365BE694FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D1B7F22-A4FD-4A94-B4E7-5E365BE694FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D1B7F22-A4FD-4A94-B4E7-5E365BE694FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D1B7F22-A4FD-4A94-B4E7-5E365BE694FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D1B7F22-A4FD-4A94-B4E7-5E365BE694FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
