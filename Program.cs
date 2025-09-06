@@ -95,7 +95,7 @@ public static class MainLogic
         }
 
         {
-            var r1 = new RationalNumber(2334 ,15634);
+            var r1 = new RationalNumber(2334, 15634);
             var r2 = new RationalNumber(1, 1777777);
 
             Console.WriteLine(
@@ -103,10 +103,21 @@ public static class MainLogic
         }
     }
 
+    private static void TestCnc()
+    {
+        var comparer = new ComplexNumberComparer();
+
+        var num1 = new ComplexNumber(3, 4);
+        var num2 = new ComplexNumber(4, 3);
+
+        Console.WriteLine($"{num1.Real} + i({num1.Imaginary}) {comparer.CompareToString(num1, num2)} {num2.Real} + i({num2.Imaginary})");
+    }
+
     private static void TestComparer()
     {
         TestRnc();
         Console.Write(Environment.NewLine);
+        TestCnc();
     }
 
     public static void RunLogic()
