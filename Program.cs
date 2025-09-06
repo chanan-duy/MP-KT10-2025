@@ -59,10 +59,20 @@ public static class MainLogic
         Console.WriteLine($"point1 == point2 (by ref): {point1 == point2}");
     }
 
+    private static void TestRectangle()
+    {
+        var rectangle1 = new Rectangle(12, 34);
+        Console.WriteLine(rectangle1);
+        var rectangle2 = rectangle1.Clone();
+        Console.WriteLine(rectangle2);
+        Console.WriteLine($"rectangle1 == rectangle2 (by ref): {rectangle1 == rectangle2}");
+    }
+
     private static void TestClonable()
     {
         TestPoint();
         Console.Write(Environment.NewLine);
+        TestRectangle();
     }
 
     public static void RunLogic()
