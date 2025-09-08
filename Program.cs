@@ -4,19 +4,19 @@ public static class MainLogic
 {
     private static void TestCustomerRepository()
     {
-        var prodRepo = new CustomerRepository();
+        var customerRepo = new CustomerRepository();
 
-        prodRepo.Add(new Customer { Id = 1, Address = "addr1", Name = "name1" });
-        prodRepo.Add(new Customer { Id = 2, Address = "addr2", Name = "name2" });
-        prodRepo.Add(new Customer { Id = 3, Address = "addr3", Name = "name3" });
+        customerRepo.Add(new Customer { Id = 1, Address = "addr1", Name = "name1" });
+        customerRepo.Add(new Customer { Id = 2, Address = "addr2", Name = "name2" });
+        customerRepo.Add(new Customer { Id = 3, Address = "addr3", Name = "name3" });
 
-        var found = prodRepo.FindById(2);
+        var found = customerRepo.FindById(2);
         if (found != null)
         {
-            prodRepo.Delete(found);
+            customerRepo.Delete(found);
         }
 
-        foreach (var customer in prodRepo.GetAll())
+        foreach (var customer in customerRepo.GetAll())
         {
             Console.WriteLine($"{customer.Id}\t{customer.Name}\t{customer.Address}");
         }
@@ -37,9 +37,9 @@ public static class MainLogic
             prodRepo.Delete(found);
         }
 
-        foreach (var customer in prodRepo.GetAll())
+        foreach (var product in prodRepo.GetAll())
         {
-            Console.WriteLine($"{customer.Id}\t{customer.Name}\t{customer.Price}");
+            Console.WriteLine($"{product.Id}\t{product.Name}\t{product.Price}");
         }
     }
 
